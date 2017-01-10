@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
   
 # function name looks for corresponding view file
 # then tells it to go read model file (note capital letter)
+# create function saves to database
   
   def new
     @contact = Contact.new
