@@ -4,6 +4,7 @@
 # but we don't need them all, so we only say the ones we want (multiple in [])
 
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
