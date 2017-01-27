@@ -19,7 +19,13 @@ class ProfilesController < ApplicationController
       render action: :new
     end
   end
-  
+
+  # GET to /users/:user_id/profile/edit  
+  def edit
+    @user = User.find(params[:user_id])
+    @profile = @user.profile
+  end
+
   # Only these can be accepted into the database
   private
     def profile_params
